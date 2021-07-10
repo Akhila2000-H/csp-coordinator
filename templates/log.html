@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+
+        <link rel="stylesheet" href="{{url_for('static',filename='log.css')}}">
+        <title>Coordinaator Login</title>
+            <link rel="stylesheet" href="http://www.srit.ac.in/css/main_style.css" />
+
+    </head>
+
+<body>
+
+
+ <center>
+        <marquee class="sec_head" attribute_name = "attribute_value"....more attributes>
+   SRIT-COMMUNITY SERVICE PROJECT--Coordinator login
+</marquee>
+    <img class="img img-responsive" id="mainBannerLogo" src="http://www.srit.ac.in/images/logo-autonomous-new4.jpg" alt="Srinivasa Ramanujan Institute of Technology"></center>
+    <hr>
+<center><h1>Coordinator Login</h1></center>
+ <form action="{{url_for('login')}}" method="post">
+
+  <div class="imgcontainer">
+    <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" class="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" class="password" required>
+
+    <button class="sub" type="submit">Login</button>
+
+  </div>
+
+
+
+
+</form>
+</body>
+</html>

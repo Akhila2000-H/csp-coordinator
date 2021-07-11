@@ -75,6 +75,11 @@ th{
 
 
 }
+.link_table{
+     width:20%;
+
+
+}
 .delete:hover{
 background:#ebe4e4;
 }
@@ -108,6 +113,9 @@ position: relative;
 .view:hover{
 background:#ebe4e4;
 }
+.tables{
+    display:inline-table;
+}
 
     </style>
 
@@ -140,9 +148,9 @@ background:#ebe4e4;
 
         <button type="submit" class="view" name="view" >view</button>
     </form>
-    <table>
+    <table style="width:70%;float:left">
                 <th>Team Name</th><th>Project</th>
-         <th>mentor</th> <th>Grade</th><th>Document</th>
+         <th>mentor</th> <th>Grade</th>
 
                 {%for user in table %}
              <tr>
@@ -157,5 +165,21 @@ background:#ebe4e4;
 
 
         </table>
+    <table class="link_table">
+        <th>Document</th>
+
+                {%for link in links %}
+             <tr>
+                {% for fire in link %}
+
+                <td style="text-aign:center"><a style="font-size:20px;margin-left:25%" href="{{fire}}" target="_">project file</a></td>
+
+                {% endfor %}
+                 </tr>
+                {% endfor %}
+
+
+
+    </table>
     </body>
 </html>

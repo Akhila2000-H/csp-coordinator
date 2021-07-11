@@ -49,13 +49,16 @@ def team_view():
     c = database.cursor()
 
 
-    c.execute("select teamname,project , mentor,marks,link from team_manage")
+    c.execute("select teamname,project , mentor,marks from team_manage")
     data = c.fetchall()
+    c.execute('select link from team_manage')
+    links=c.fetchall()
+
     c.execute("select teamname from team_manage")
     teams=c.fetchall()
     print(data)
 
-    return render_template('team_table.html',table=data,project='nothing',teamcode='nothing',teams=teams)
+    return render_template('team_table.html',table=data,project='nothing',teamcode='nothing',teams=teams,links=links)
 
 
 @app.route('/home/delete',methods=['POST','GET'])
